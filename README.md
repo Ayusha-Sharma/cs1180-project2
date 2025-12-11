@@ -1,67 +1,94 @@
-# cs1180-project2 Simon Says – Java Console Game
-Project 2 – Simon Says Game (CS1180)
+ CS1180 – Project 2
+Simon Says – Java Console Memory Game
 
-This project is a Java console program that recreates the classic Simon Says memory game. The game allows the player to choose between two difficulty levels and tests their ability to remember and repeat sequences.
+This project is a Java console application that recreates the classic Simon Says memory challenge. The goal of the game is simple: watch the sequence, remember it, and repeat it correctly. As the sequence grows longer, the challenge increases.
 
+Overview
 
-Features:
+The program allows the player to choose their preferred difficulty level and then generates sequences of colors or digits based on that choice. Each round, the sequence becomes longer, and the player earns points by repeating it correctly. The game continues until the player makes a mistake, after which they can choose to play again.
 
-Difficulty Selection:
-The player chooses easy or hard mode at the start.
+ Game Features
+🔹 Difficulty Selection
 
-Easy Mode (Colors):
-Simon generates a sequence using the colors:
-red, blue, green, yellow
-The sequence grows as the player scores points.
+The player begins by choosing:
 
-Hard Mode (Numbers):
-Simon generates a sequence using digits:
-0–9
-Sequence length increases based on the player’s score.
+Easy Mode – sequence made of colors (red, blue, green, yellow)
 
-Scoring System:
-The player earns a point for each correct sequence.
+Hard Mode – sequence made of digits (0–9)
 
-Replay Option:
-After a wrong answer, the player can choose to play again.
+🔹 Dynamic Sequence Growth
 
+Each correct answer adds a new random item to the sequence:
 
-How It Works:
+Easy mode: random color added
 
-The game prompts the user to select a difficulty.
+Hard mode: random number added
 
-A random sequence of colors or numbers is generated.
+🔹 Scoring System
 
-The sequence is displayed, followed by a countdown.
++1 point for every correct round
 
-The screen is cleared and the player must repeat the sequence.
+Score increases as the sequence gets longer
 
-If the input matches, the game continues with a longer sequence.
+Final score displayed when the user makes a mistake
 
-If incorrect, the game ends and shows the final score.
+🔹 Replay Option
 
+After losing, the user is asked whether they want to:
 
-Topics Used:
+Play again, or
 
-•	Methods
+Exit the program
 
-•	Loops
+ How the Game Works
 
-•	Conditionals
+The user chooses difficulty.
 
-•	String manipulation
+Simon generates and displays a random sequence.
 
-•	Random number generation
+A countdown gives the user time to memorize it.
 
-•	User input with Scanner
+The screen clears, prompting the user to re-enter the sequence.
 
-•	Recursion (for repeating rounds)
+If the user matches the sequence:
 
+They score a point
 
-How to Run:
+A new round begins with a longer sequence
 
-Compile and execute the program using:
-          
+If the user enters the wrong sequence:
+
+The game ends
+
+Final score is shown
+
+Replay option appears
+
+ Concepts & Java Topics Used
+
+This project demonstrates key programming concepts from CS1180:
+
+Methods (modular design)
+
+Loops (sequence repetition & rounds)
+
+Conditionals (checking difficulty and correctness)
+
+String Manipulation (comparing user input)
+
+Random Number Generation (Random class)
+
+User Input (Scanner)
+
+Recursion (optional: replaying the game)
+
+ How to Run the Program
+
+Compile the program:
+
 javac SimonSays.java
+
+
+Run the program:
 
 java SimonSays
